@@ -55,7 +55,7 @@ function checkInputValidity(formElement, inputElement, settings){
     }
 
     if (inputElement.classList.contains("popup__input_type_url")) {
-    const urlChar = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-]*)*$/i
+    const urlChar = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&=/:]*)$/;
     if (!urlChar.test(value)) {
       showInputError(formElement, inputElement, "Введите корректную ссылку", settings)
       return
